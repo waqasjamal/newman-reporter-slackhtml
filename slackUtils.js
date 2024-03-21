@@ -5,7 +5,7 @@ var jsonminify = require("jsonminify");
 let messageSize;
 
 // creates message for slack
-function slackMessage(stats, timings, failures, executions, maxMessageSize, collection, environment, channel, reportingUrl, limitFailures) {
+function slackMessage(stats, timings, failures, executions, maxMessageSize, collection, environment, channel, reportingUrl, buildUrl, limitFailures) {
     messageSize = maxMessageSize;
     let parsedFailures = parseFailures(failures);
     let skipCount = getSkipCount(executions);
@@ -43,6 +43,7 @@ function slackMessage(stats, timings, failures, executions, maxMessageSize, coll
             },
             ${collectionAndEnvironentFileBlock(collection, environment)}
             ${reportingUrlSection(reportingUrl)}
+            ${buildUrlSection(buildUrl)}
             {
                 "type": "divider"
             },
@@ -140,6 +141,19 @@ function reportingUrlSection(reportingUrl) {
 				"type": "mrkdwn",
 				"text": "Reporting URL: ${reportingUrl}"
 			}
+        }, `
+    }
+    return '';
+}
+
+function buildUrlSection(buildUrl) {
+    if (buildUrl) {
+        return `{
+            "type": "section",
+            "text": {
+                "type": "mrkdwn",
+                "text": "Build URL: ${buildUrl}"
+            }
         }, `
     }
     return '';
