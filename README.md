@@ -34,6 +34,7 @@ or
  --reporter-slackmsg-collection '<collectionName> e.g test.json
  --reporter-slackmsg-environment '<environmentName> e.g env.json
  --reporter-slackmsg-reportingurl '<URL> e.g https://127.0.1/index.html
+  --reporter-slackmsg-buildurl '<URL> e.g https://CICD.com/jobs/url-1
   --reporter-slackmsg-limitFailures '<limitFailures>; e.g 5
 
 ```
