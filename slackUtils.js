@@ -126,7 +126,7 @@ function collectionAndEnvironentFileBlock(collection, environment) {
             "type": "section",
 			"text": {
 				"type": "mrkdwn",
-				"text": "Service/Repo Name: ${collection} \\n Environment: ${environment ? environment : ''}"
+				"text": "Automation Repo: ${collection} \\n Environment: ${environment ? environment : ''}"
 			}
         }, `
     }
