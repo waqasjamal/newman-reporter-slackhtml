@@ -59,7 +59,7 @@ function slackMessage(stats, timings, failures, executions, maxMessageSize, coll
                 "fields": [
                     {
                         "type": "mrkdwn",
-                        "text": "Total Tests:"
+                        "text": " Total Tests:"
                     },
                     {
                         "type": "mrkdwn",
@@ -126,7 +126,7 @@ function collectionAndEnvironentFileBlock(collection, environment) {
             "type": "section",
 			"text": {
 				"type": "mrkdwn",
-				"text": "Collection: ${collection} \\n Environment: ${environment ? environment : ''}"
+				"text": "Automation Repo: ${collection} \\n Environment: ${environment ? environment : ''}"
 			}
         }, `
     }
