@@ -1,13 +1,13 @@
 {
-  "name": "newman-slack-reporter",
+  "name": "newman-reporter-slackhtml",
   "version": "1.0.0",
-  "description": "newman slack reporter",
+  "description": "newman reporter slackhtml",
   "main": "index.js",
   "scripts": {
     "lint": "eslint index/js",
     "test": "jest",
     "prepack": "npm run test",
-    "pack": "npm pack && npm install -g newman-slack-reporter-1.0.0.tgz"
+    "pack": "npm pack && npm install -g newman-reporter-slackhtml-1.0.0.tgz"
   },
   "repository": {
     "type": "git",
