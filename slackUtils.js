@@ -52,7 +52,7 @@ function slackMessage(stats, timings, failures, executions, maxMessageSize, coll
             },
             {
                 "type": "divider"
-            }
+            },
             ${collectionAndEnvironentFileBlock(collection, environment)}
             ${reportingUrlSection(reportingUrl)}
             ${buildUrlSection(buildUrl)}
