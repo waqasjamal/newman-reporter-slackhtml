@@ -45,7 +45,7 @@ function slackMessage(stats, timings, failures, executions, maxMessageSize, coll
                 "type": "section",
                 "text": {
                     "type": "mrkdwn",
-                    "text": "*Overall Status:* ${failures.length > 0 ? "Failed" : "Pass"}"
+                    "text": "*Overall Status:* ${failures.length > 0 ? 'Failed' : 'Pass'}"
                 }
             },
             {
