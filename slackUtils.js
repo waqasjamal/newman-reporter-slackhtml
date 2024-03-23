@@ -41,6 +41,16 @@ function slackMessage(stats, timings, failures, executions, maxMessageSize, coll
             {
                 "type": "divider"
             },
+            {
+                "type": "section",
+                "text": {
+                    "type": "mrkdwn",
+                    "text": "*Overall Status:* ${failures.length > 0 ? "Failed" : "Pass"}"
+                }
+            },
+            {
+                "type": "divider"
+            }
             ${collectionAndEnvironentFileBlock(collection, environment)}
             ${reportingUrlSection(reportingUrl)}
             ${buildUrlSection(buildUrl)}
