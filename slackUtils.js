@@ -9,6 +9,8 @@ function slackMessage(stats, timings, failures, executions, maxMessageSize, coll
     messageSize = maxMessageSize;
     let parsedFailures = parseFailures(failures);
     let skipCount = getSkipCount(executions);
+    let passStatus = "Pass";
+    let failStatus = "Failed";
     let failureMessage = `
     "attachments": [
         {
@@ -45,7 +47,7 @@ function slackMessage(stats, timings, failures, executions, maxMessageSize, coll
                 "type": "section",
                 "text": {
                     "type": "mrkdwn",
-                    "text": "*Overall Status:* ${failures.length > 0 ? 'Failed' : 'Pass'}"
+                    "text": "*Overall Status:* ${failures.length > 0 ? failStatus : passStatus}"
                 }
             },
             {
